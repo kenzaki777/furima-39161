@@ -31,7 +31,7 @@ has_many :records
  
  ### association
  has_one :record
- belongs_to :users
+ belongs_to :user
 
 ## recordsテーブル
 | Column           | Type     | Options                        |
@@ -40,8 +40,8 @@ has_many :records
 |item              |references| null: false,foreign_key: true  |
 
 ### association
-belongs_to :users
-belongs_to :items
+belongs_to :user
+belongs_to :item
 has_one :shipping_address
 
 ## shipping_addressesテーブル
