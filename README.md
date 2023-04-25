@@ -53,6 +53,6 @@ has_one :shipping_address
 |address           |string    | null:false                     |
 |building_name     |string    |                                |
 |telephone_number  |string    | null:false                     |
-|record            |string    | null:false,foreign_key: true   |
+|record            |references| null:false,foreign_key: true   |
 ### association
 belongs_to :record
