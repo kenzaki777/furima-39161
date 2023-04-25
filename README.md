@@ -50,9 +50,9 @@ has_one :shipping_address
 |post_code         |string    | null: false                    |
 |sender_aria_id    |integer   | null:false                     |
 |municipalities    |string    | null:false                     |
-|address           |references| null:false,foreign_key: true   |
-|building_name     |references| foreign_key: true              |
-|telephone_number  |references| null:false,foreign_key: true   |
-
+|address           |references| null:false                     |
+|building_name     |references|                                |
+|telephone_number  |references| null:false                     |
+|records           |references| foreign_key: true              |
 ### association
 belongs_to :record
