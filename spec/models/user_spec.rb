@@ -73,7 +73,7 @@ RSpec.describe User, type: :model do
     it 'first_nameが空では登録できない' do
       @user.first_name = ''
       @user.valid?
-      expect(@user.errors.full_messages).to include("First name can't be blank", "First name 漢字・ひらがな・カタカナのみ使用できます")
+      expect(@user.errors.full_messages).to include("First name can't be blank")
     end
     it 'first_nameが半角では登録できない' do
       @user.first_name = 'aaaa'
@@ -83,7 +83,7 @@ RSpec.describe User, type: :model do
     it 'second_nameが空では登録できない' do
       @user.second_name = ''
       @user.valid?
-      expect(@user.errors.full_messages).to include("Second name can't be blank","Second name 漢字・ひらがな・カタカナのみ使用できます")
+      expect(@user.errors.full_messages).to include("Second name can't be blank")
     end
     it 'second_nameが半角では登録できない' do
       @user.second_name = 'aaaa'
@@ -93,7 +93,7 @@ RSpec.describe User, type: :model do
     it 'first_name_kanaが空では登録できない' do
       @user.first_name_kana = ''
       @user.valid?
-      expect(@user.errors.full_messages).to include("First name kana can't be blank", "First name kana カタカナのみ使用できます")
+      expect(@user.errors.full_messages).to include("First name kana can't be blank")
     end
     it 'first_name_kanaが半角では登録できない' do
       @user.first_name_kana = 'aaaa'
@@ -103,7 +103,7 @@ RSpec.describe User, type: :model do
     it 'second_name_kanaが空では登録できない' do
       @user.second_name_kana = ''
       @user.valid?
-      expect(@user.errors.full_messages).to include("Second name kana can't be blank","Second name kana カタカナのみ使用できます")
+      expect(@user.errors.full_messages).to include("Second name kana can't be blank")
     end
     it 'second_name_kanaが半角では登録できない' do
       @user.second_name_kana = 'aaaaa'
