@@ -25,7 +25,7 @@ has_many :records
 |item_type_id         |integer   | null: false                    |
 |item_condition_id    |integer   | null: false                    |
 |cost_type_id         |integer   | null: false                    |
-|sender_aria_id       |integer   | null: false                    |
+|sender_area_id       |integer   | null: false                    |
 |days_ship_id         |integer   | null: false                    |
 |price                |integer   | null: false                    |
  
