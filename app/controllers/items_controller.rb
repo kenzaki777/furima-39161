@@ -40,7 +40,7 @@ class ItemsController < ApplicationController
     @item.destroy
     redirect_to root_path
   end
-end
+
 
 
 private
@@ -58,3 +58,4 @@ private
   def judgment_user
     redirect_to root_path unless current_user == @item.user
   end
+end
