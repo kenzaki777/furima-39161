@@ -1,6 +1,5 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
-  before_action :move_to_index, only:[:edit]
   before_action :road_item,only:[:show,:edit,:update]
   before_action :judgment_user,only:[:edit,:update]
   def index
@@ -45,9 +44,7 @@ private
     params.require(:item).permit(:item_name, :concept,:item_type_id,:item_condition_id,:price,:sender_area_id,:days_ship_id,:cost_type_id, :image).merge(user_id: current_user.id)
   end
   
-  def move_to_index
-    redirect_to new_user_session_path unless user_signed_in?
-  end
+  
 
   def road_item
     @item = Item.find(params[:id])
