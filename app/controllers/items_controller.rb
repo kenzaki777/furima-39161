@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit,:destroy]
   before_action :road_item,only:[:show,:edit,:update,:destroy]
-  before_action :judgment_user,only:[:edit,:update]
+  before_action :judgment_user,only:[:edit,:update,:destroy]
   def index
     @items = Item.all.order("id DESC")
   end
