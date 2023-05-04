@@ -8,8 +8,10 @@
     </h2>
     <div class="item-img-content">
       <%= image_tag @item.image ,class:"item-box-img" %>
+
      
      <% if @item.record.present? && @item.record.id.present? %>
+
       <div class="sold-out">
         <span>Sold Out!!</span>
       </div>
@@ -24,6 +26,7 @@
         <%= @item.cost_type.name %>
       </span>
     </div>
+
 
     
   <% if @item.record.present? %>
@@ -43,6 +46,7 @@
     
 
     
+
 
     <div class="item-explain-box">
       <span><%= @item.concept %></span>

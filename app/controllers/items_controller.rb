@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
     end
   end
 
+
   def show
     
   end
@@ -42,6 +43,8 @@ class ItemsController < ApplicationController
     redirect_to root_path
   end
 
+
+ 
 
 
 private
