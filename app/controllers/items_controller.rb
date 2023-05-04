@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit,:destroy]
   before_action :road_item,only:[:show,:edit,:update,:destroy]
   before_action :judgment_user,only:[:edit,:update,:destroy]
+  before_action :judgment_user_sold_out,only:[:edit]
   def index
     @items = Item.all.order("id DESC")
   end
@@ -58,4 +59,11 @@ private
   def judgment_user
     redirect_to root_path unless current_user == @item.user
   end
+  def judgment_user_sold_out
+    @item = Item.find(params[:id])
+    if @item.record.present?
+      redirect_to action: :index
+    end
+  end
 end
+

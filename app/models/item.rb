@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   belongs_to :cost_type
   belongs_to :sender_area
   belongs_to :days_ship
-
+  has_one :record
 
 
 
