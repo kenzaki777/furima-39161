@@ -9,7 +9,7 @@ class RecordShippingAddress
   validates :municipalities, presence: true
   validates :address, presence: true
   validates :telephone_number, presence: true, length: { minimum: 10, maximum: 11 }
-  validates :telephone_number, format: {with: /^0[0-9]{9,10}$/u  , message: "is not a valid number" }
+  validates :telephone_number, format: {with: /\A0[0-9]{9,10}\z/u  , message: "is not a valid number" }
   validates :token, presence: true
 
   def save
